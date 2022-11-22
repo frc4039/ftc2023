@@ -206,14 +206,14 @@ public class Teleop21 extends OpMode {
             servoMove(0);
         }
 
-        // Travel height
+        // Low pole
         if(gamepad2.dpad_down){
-            moveToPos(-0.4, -180); //THIS WORKS FOR NOW, DON'T CHANGE IT
+            moveToPos(-0.6, -1255); //THIS WORKS FOR NOW, DON'T CHANGE IT
         }
         // Low pole
-        if(gamepad2.dpad_right) {
+      /*  if(gamepad2.dpad_right) {
             moveToPos(-0.6, -1255);
-        }
+        }*/
         // Medium pole
         if(gamepad2.dpad_left) {
             moveToPos(-0.6, -2130);
@@ -237,8 +237,9 @@ public class Teleop21 extends OpMode {
             // BEN A -- } else {
             // BEN A -- liftMotor.setPower(0);
         }*/
+        // Move to travel height
         if(gamepad2.a) {
-            moveToPos(-0.6,-2900);
+            moveToPos(-0.4,-180);
         }
         else if(gamepad2.b) {
             liftMotor.setPower(0.45);
