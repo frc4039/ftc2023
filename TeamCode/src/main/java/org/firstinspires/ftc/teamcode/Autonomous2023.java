@@ -175,8 +175,7 @@ public class Autonomous2023 extends LinearOpMode {
 
 
         // progress through each step of the autonomous routine
-        
-                // manual input, remove this when Apriltag code is available
+
         //ensure gripper is open
         
         servoMove(0.30); 
@@ -192,7 +191,7 @@ public class Autonomous2023 extends LinearOpMode {
         
         // segment 2: raise cone to scoring height for mid junction
         
-        liftMotor.setTargetPosition(-1255); 
+        liftMotor.setTargetPosition(-2130);
         liftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         liftMotor.setPower(0.60);
         while (opModeIsActive() && liftMotor.isBusy())
