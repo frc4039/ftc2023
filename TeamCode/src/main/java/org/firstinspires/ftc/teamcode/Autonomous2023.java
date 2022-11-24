@@ -227,9 +227,9 @@ public class Autonomous2023 extends LinearOpMode {
         runtime.reset(); // reset elapsed time timer
         sleep(1000);
         
-        // step 6: lower gripper to travel height
+        // step 6: lower gripper to bottom height
         
-        liftMotor.setTargetPosition(-180); 
+        liftMotor.setTargetPosition(0);
         liftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         liftMotor.setPower(0.40);
         while (opModeIsActive() && liftMotor.isBusy())
