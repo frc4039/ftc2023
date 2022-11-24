@@ -189,21 +189,21 @@ public class Teleop21 extends OpMode {
         if(gamepad2.right_bumper && liftMotor.getCurrentPosition() < 0 && liftMotor.getCurrentPosition() > -180) {
             moveToPos(-0.6, -180);
         }
-        // Servo open
      /*   if(gamepad1.x || liftMotor.getCurrentPosition() > -50) {
             servoMove(0.30);
 
         }*/
+        // Servo open
         if(gamepad2.x || liftMotor.getCurrentPosition() > -50) {
-            servoMove(0.55);
+            servoMove(0.30);
         }
 
-        // Servo close
        /* if(gamepad1.y) {
             servoMove(0.08);
         }*/
+        // Servo close
         if(gamepad2.y) {
-            servoMove(0);
+            servoMove(0.08);
         }
 
         // Low pole
