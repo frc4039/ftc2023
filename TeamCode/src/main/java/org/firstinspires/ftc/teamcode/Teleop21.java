@@ -161,7 +161,7 @@ public class Teleop21 extends OpMode {
         }*/
 
         if(gamepad2.right_bumper && liftMotor.getCurrentPosition() < -2130) {
-            moveToPos(-0.6, -2900);
+            moveToPos(-0.6, -3000);
         }
 
         // Moves up from low to medium
@@ -220,7 +220,7 @@ public class Teleop21 extends OpMode {
         }
         // High pole
         if(gamepad2.dpad_up) {
-            moveToPos(-0.7, -2900);
+            moveToPos(-0.7, -3000);
         }
 
         // Servo position in degrees
