@@ -161,7 +161,7 @@ public class Teleop21 extends OpMode {
         }*/
 
         if(gamepad2.right_bumper && liftMotor.getCurrentPosition() < -2130) {
-            moveToPos(-0.6, -2900);
+            moveToPos(-0.6, -3000);
         }
 
         // Moves up from low to medium
@@ -189,38 +189,38 @@ public class Teleop21 extends OpMode {
         if(gamepad2.right_bumper && liftMotor.getCurrentPosition() < 0 && liftMotor.getCurrentPosition() > -180) {
             moveToPos(-0.6, -180);
         }
-        // Servo open
      /*   if(gamepad1.x || liftMotor.getCurrentPosition() > -50) {
             servoMove(0.30);
 
         }*/
+        // Servo open
         if(gamepad2.x || liftMotor.getCurrentPosition() > -50) {
-            servoMove(0.55);
+            servoMove(0.30);
         }
 
-        // Servo close
        /* if(gamepad1.y) {
             servoMove(0.08);
         }*/
+        // Servo close
         if(gamepad2.y) {
-            servoMove(0);
+            servoMove(0.08);
         }
 
-        // Travel height
+        // Low pole
         if(gamepad2.dpad_down){
-            moveToPos(-0.4, -180); //THIS WORKS FOR NOW, DON'T CHANGE IT
+            moveToPos(-0.6, -1255); //THIS WORKS FOR NOW, DON'T CHANGE IT
         }
         // Low pole
-        if(gamepad2.dpad_right) {
+      /*  if(gamepad2.dpad_right) {
             moveToPos(-0.6, -1255);
-        }
+        }*/
         // Medium pole
         if(gamepad2.dpad_left) {
             moveToPos(-0.6, -2130);
         }
         // High pole
         if(gamepad2.dpad_up) {
-            moveToPos(-0.7, -2900);
+            moveToPos(-0.7, -3000);
         }
 
         // Servo position in degrees
@@ -237,8 +237,9 @@ public class Teleop21 extends OpMode {
             // BEN A -- } else {
             // BEN A -- liftMotor.setPower(0);
         }*/
+        // Move to travel height
         if(gamepad2.a) {
-            moveToPos(-0.6,-2900);
+            moveToPos(-0.4,-180);
         }
         else if(gamepad2.b) {
             liftMotor.setPower(0.45);

@@ -49,6 +49,7 @@ import com.qualcomm.robotcore.util.Range;
  */
 
 @TeleOp(name="Robot: Teleop POV", group="Robot")
+@Disabled
 public class RobotTeleopPOV_SimpleTest extends LinearOpMode {
 
     /* Declare OpMode members. */
